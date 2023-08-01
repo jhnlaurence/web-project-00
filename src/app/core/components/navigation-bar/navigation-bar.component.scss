@@ -1,34 +1,107 @@
-//@import "../../../../assets/scss/main.scss";
+@import "../../../../assets/scss/main.scss";
+$margin: 20px;
 
-/** NAVIGATION BAR */
+// nav {
+//   overflow: hidden;
+//   background-color: $white;
+//   position: fixed;
+//   top: 0;
+//   width: 100%;
+
+//   ul {
+//     text-align: center;
+//     list-style-type: none;
+//     margin: 0;
+//     justify-content: space-evenly;
+//     padding: 20px;
+//     li {
+//       display: inline;
+//       font-family: "Montserrat Medium";
+//       font-size: 16px;
+//       margin:15px;
+//       a {
+//         color: $grey;
+//         text-decoration: none;
+//         padding: 8px 14px;
+//         &:hover {
+//           font-family: "Montserrat Medium";
+//           background-color: $orange;
+//           color: $white;
+//         }
+//       }
+//     }
+//   }
+//   .navbar-left {
+//     margin-left: $margin; /* Adjust as per your desired left spacing */
+//     flex: 1; /* The logo will take all available space on the left */
+//   }
+//   .navbar-right {
+//     margin-right: $margin; /* Adjust as per your desired right spacing */
+//   }
+// }
+
 nav {
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  ul {
-    text-align: center;
-    list-style-type: none;
-    list-style-type: none;
-    margin: 0;
-    padding: 15px;
-    li {
-      display: inline;
-      font-family: "Fira Sans", sans-serif;
-      font-size: 17px;
-      a {
-        color: #f2f2f2;
-        text-decoration: none;
-        padding: 14px;
-        &:hover {
-          background-color: #111;
-        }
-      }
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left:0;
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    padding: 10px;
+    color: $grey;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    
+
+    // Logo styles
+    .logo {
+        flex: 1;
     }
-  }
+
+    // Navigation links styles using Grid
+    .nav-links {
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        gap: 20px;
+        text-align: center;
+        padding: 10px;
+        // Link styles
+        li {
+            list-style: none;
+        }
+        a {
+            font-family: "Montserrat Medium";
+            text-decoration: none;
+            color: $grey;
+            padding: 0px 10px;
+            position:relative;
+            // Hover effect for links
+            &:hover {
+                color: $orange;
+            }
+            &:after {
+                content:"";
+                position: absolute;
+                background-color: $orange;
+                height: 1.5px;
+                width: 0%;
+                
+                left: 0;
+                bottom: -6px;
+                transition: .3s;
+            }
+            &:hover:after {
+                width: 100%;
+            }
+        }
+    }
 }
 
 .content {
-  text-align: center;
+  text-align: right;
+}
+.navlogo{
+    width: 1px;
 }
