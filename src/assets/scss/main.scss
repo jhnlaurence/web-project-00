@@ -1,9 +1,10 @@
 // Base
-@import "./base/fonts.scss";
-@import "./base/reset.scss";
+@import "./base/fonts";
+@import "./base/reset";
 
 // Configs
 @import "./config/breakpoints.scss";
 @import "./config/colors.scss";
+@import "./config/mixins.scss";
 
 // Components
