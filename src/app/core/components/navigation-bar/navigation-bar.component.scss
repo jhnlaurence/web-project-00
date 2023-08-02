@@ -31,13 +31,7 @@ $margin: 20px;
 //       }
 //     }
 //   }
-//   .navbar-left {
-//     margin-left: $margin; /* Adjust as per your desired left spacing */
-//     flex: 1; /* The logo will take all available space on the left */
-//   }
-//   .navbar-right {
-//     margin-right: $margin; /* Adjust as per your desired right spacing */
-//   }
+
 // }
 
 nav {
@@ -67,12 +61,10 @@ nav {
         gap: 20px;
         text-align: center;
         padding: 10px;
-        // Link styles
-        li {
-            list-style: none;
-        }
+        list-style-type: none;
+        font-family: "Montserrat Medium";
+        
         a {
-            font-family: "Montserrat Medium";
             text-decoration: none;
             color: $grey;
             padding: 0px 10px;
@@ -87,7 +79,6 @@ nav {
                 background-color: $orange;
                 height: 1.5px;
                 width: 0%;
-                
                 left: 0;
                 bottom: -6px;
                 transition: .3s;

@@ -1,3 +1,5 @@
+@import "./theme-configs.scss";
+
 // Base
 @import "./base/fonts";
 @import "./base/reset";
@@ -13,6 +15,6 @@ body {
 }
 
 /* remove this*/
-// div, nav{
-//     border: 1px solid red;
+// div, footer{
+//     border: 1px solid black;
 // }
