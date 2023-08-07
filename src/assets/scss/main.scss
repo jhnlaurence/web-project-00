@@ -1,3 +1,5 @@
+@import "./theme-configs.scss";
+
 // Base
 @import "./base/fonts";
 @import "./base/reset";
@@ -8,11 +10,9 @@
 @import "./config/mixins.scss";
 
 // Components
-body {
-    padding-top: 75px; /* Replace '60px' with the height of your fixed navbar */
-}
+
 
 /* remove this*/
-// div, nav{
-//     border: 1px solid red;
+// *{
+//     border: 1px solid black;
 // }

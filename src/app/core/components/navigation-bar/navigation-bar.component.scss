@@ -1,55 +1,16 @@
 @import "../../../../assets/scss/main.scss";
 $margin: 20px;
 
-// nav {
-//   overflow: hidden;
-//   background-color: $white;
-//   position: fixed;
-//   top: 0;
-//   width: 100%;
-
-//   ul {
-//     text-align: center;
-//     list-style-type: none;
-//     margin: 0;
-//     justify-content: space-evenly;
-//     padding: 20px;
-//     li {
-//       display: inline;
-//       font-family: "Montserrat Medium";
-//       font-size: 16px;
-//       margin:15px;
-//       a {
-//         color: $grey;
-//         text-decoration: none;
-//         padding: 8px 14px;
-//         &:hover {
-//           font-family: "Montserrat Medium";
-//           background-color: $orange;
-//           color: $white;
-//         }
-//       }
-//     }
-//   }
-//   .navbar-left {
-//     margin-left: $margin; /* Adjust as per your desired left spacing */
-//     flex: 1; /* The logo will take all available space on the left */
-//   }
-//   .navbar-right {
-//     margin-right: $margin; /* Adjust as per your desired right spacing */
-//   }
-// }
-
 nav {
     overflow: hidden;
-    position: fixed;
+    position: sticky;
     width: 100%;
     top: 0;
-    left:0;
     display: flex;
     align-items: center;
     background-color: $white;
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom:10px;
     color: $grey;
     flex-wrap:wrap;
     justify-content: space-around;
@@ -67,12 +28,10 @@ nav {
         gap: 20px;
         text-align: center;
         padding: 10px;
-        // Link styles
-        li {
-            list-style: none;
-        }
+        list-style-type: none;
+        font-family: "Montserrat Medium";
+        
         a {
-            font-family: "Montserrat Medium";
             text-decoration: none;
             color: $grey;
             padding: 0px 10px;
@@ -87,7 +46,6 @@ nav {
                 background-color: $orange;
                 height: 1.5px;
                 width: 0%;
-                
                 left: 0;
                 bottom: -6px;
                 transition: .3s;

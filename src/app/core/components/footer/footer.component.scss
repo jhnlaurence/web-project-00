@@ -1,0 +1,158 @@
+// Custom styles for the footer
+@import "../../../../assets/scss/main.scss";
+
+
+footer{
+    background-color: $orange;
+    color: $white;
+    padding: 10px;
+    padding-bottom: 50px;
+}
+
+.footer-info {
+    overflow: hidden;
+    // Flexbox
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.footer-heading{
+    font-family: "Montserrat Bold";
+    padding: 10px;
+}
+
+.connected{
+    padding-top:30px;
+}
+
+.footer-links{
+    overflow: hidden;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    .about-us, .services{
+        padding: 30px;
+    }
+}
+
+.footer-item {
+    display: grid;
+    grid-template-rows: repeat(auto, auto);
+    gap: 12px;
+    text-align: left;
+    padding: 10px;
+    list-style-type: none;
+    font-family: "Montserrat Medium";
+
+        a {
+            text-decoration: none;
+            color: $white;
+            padding: 0px 0px;
+            position:relative;
+            &:hover {
+                color: $white;
+            }
+            &:after {
+                content:"";
+                position: absolute;
+                background-color: $white;
+                height: 1.5px;
+                width: 0%;
+                left: 0;
+                bottom: -6px;
+                transition: .3s;
+            }
+            &:hover:after {
+                width: 100%;
+            }
+        }
+}
+
+.social-links{
+    display: flex;
+    flex-wrap:wrap;
+    overflow: hidden;
+    
+    .links{
+        padding: 10px;
+        a {
+            text-decoration: none;
+            
+            img{
+                color: $white;
+                padding: 0px 0px;
+                position:relative;
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.copyrights{
+    overflow: hidden;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+// Line animation of the end
+
+.ticker-container {
+    width: 100%;
+    height: 8vh;
+    overflow: hidden;
+    //position: absolute;
+}
+
+.scroll {
+    display: flex;
+    width: 100%;
+    box-shadow: 0 8px 16px rgba(#000000, 0.5);
+    overflow: hidden; /* Hide content that goes beyond the container */
+    //perspective: 1000px; /* Adjust for desired tilt effect */
+    transform: rotate(-9deg) translateX(-2.5w); /* Tilt the entire container */
+    
+    div {
+        font-weight: 800;
+        font-size: 2em;
+        text-transform: uppercase;
+        white-space: nowrap;
+        color: #212121;
+        background-color: #fff;
+        animation: animate 40s -40s linear infinite;
+        will-change: transform;
+        
+        &:nth-child(2) {
+            animation: animate2 40s -20s linear infinite;
+        }
+    }
+    
+    span {
+        -webkit-text-stroke: 1.5px #000000;
+        color: #ffffff;
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+}
