@@ -1,0 +1,4 @@
+@mixin padding-top-bottom($number){
+    padding-top: $number;
+    padding-bottom: $number;
+}

@@ -1,0 +1,22 @@
+<section class="flex-box">
+    <div class="scrolling-content">
+        <div class="ciao-wrapper" *ngIf="scrolledOver === false">
+            <div class="ciao-frames">
+                <div class="frame" id="one"></div>
+                <div class="frame" id="two"></div>
+                <div class="frame" id="three"></div>
+                <div class="frame" id="four"></div>
+            </div>
+        </div>
+        <div class="info" *ngIf="scrolledOver === true">
+            <div class="lineUp">
+                <img src="../../../assets/img/suits-cropped.png" alt="suited">
+            </div>
+            <div class="introduction">
+                <h2 class="lineUp black">Im</h2>
+                <h1 class="lineUp orange">Laurence</h1>
+                <h1 class="lineUp black">Lebarios</h1>
+            </div>
+        </div>
+    </div>
+</section>
