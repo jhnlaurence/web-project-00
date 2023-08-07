@@ -6,28 +6,21 @@ nav {
     position: sticky;
     width: 100%;
     top: 0;
-    display: flex;
-    align-items: center;
     background-color: $white;
-    padding-top: 10px;
-    padding-bottom:10px;
+    @include padding-top-bottom(10px);
     color: $grey;
-    flex-wrap:wrap;
-    justify-content: space-around;
-    
-
-    // Logo styles
-    .logo {
-        flex: 1;
-    }
+    margin-bottom: 20px;
 
     // Navigation links styles using Grid
     .nav-links {
-        display: grid;
-        grid-template-columns: repeat(5, auto);
-        gap: 20px;
-        text-align: center;
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+
         padding: 10px;
+        font-size: 2em;
         list-style-type: none;
         font-family: "Montserrat Medium";
         
@@ -55,11 +48,4 @@ nav {
             }
         }
     }
-}
-
-.content {
-  text-align: right;
-}
-.navlogo{
-    width: 1px;
 }
