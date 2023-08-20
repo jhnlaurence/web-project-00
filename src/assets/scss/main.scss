@@ -1,18 +1,16 @@
 @import "./theme-configs.scss";
 
-// Base
+/*Base*/
 @import "./base/fonts";
 @import "./base/reset";
 
-// Configs
+/*Configs*/
 @import "./config/breakpoints.scss";
 @import "./config/colors.scss";
 @import "./config/mixins.scss";
 
-// Components
-
 
 /* remove this*/
-// *{
-//     border: 1px solid black;
-// }
+/*{
+    border: 1px solid black;
+ }*/

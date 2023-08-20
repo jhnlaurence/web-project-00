@@ -1,0 +1,59 @@
+@import "../../../../assets/scss/main.scss";
+
+section {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.side-text{
+    display: flex;
+    flex-wrap:wrap;
+    
+    ul {
+        list-style-type: none;
+        font-family: "Montserrat Regular";
+        text-decoration: none;
+        margin-bottom: 2vh;
+        li{
+            font-size: 5vh;
+        }
+    }
+}
+
+.side-img{
+    display: flex;
+    flex-wrap: wrap;
+    .flex-box{
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        flex-flow: row wrap;
+        .square-img01 {
+            background: url(../../../../assets/img/temp/temp-img01.png) 50% 50% no-repeat; /* 50% 50% centers image in div */
+            width: 250px;
+            height: 250px;
+            border-radius: 8px;
+            margin:5px;
+        }
+        .square-img02 {
+            background: url(../../../../assets/img/temp/temp-img02.png) 50% 50% no-repeat; /* 50% 50% centers image in div */
+            width: 250px;
+            height: 250px;
+            border-radius: 8px;
+            margin:5px;
+        }
+    }
+    
+    .square-img03 {
+        background: url(../../../../assets/img/temp/temp-img03.png) 100% 100% no-repeat; /* 50% 50% centers image in div */
+        width: 510px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin:5px;
+    }
+}
