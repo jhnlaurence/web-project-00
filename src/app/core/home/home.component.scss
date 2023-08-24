@@ -1,5 +1,13 @@
 @import "../../../assets/scss/config/colors.scss";
 
+@mixin forBanner($bgColor, $txtColor) {
+    font-weight: 800;
+    font-size: 4em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: $txtColor;
+    background-color: $bgColor;
+}
 
 .orange {
     background-color: $orange;
@@ -15,8 +23,9 @@
     overflow: hidden; 
     width: 100%;
     height: 8vh;
-    transform: rotate(-2deg);
     margin-top: -50px;
+    transform: rotate(-2deg);
+    z-index: -5;
 }
 
 .scroll {
@@ -28,11 +37,10 @@
     div {
         font-weight: 800;
         font-size: 4em;
-        text-transform: uppercase;
         white-space: nowrap;
         color: $white;
         background-color: $black;
-        animation: animate 20s -80s linear infinite;
+        animation: animate 40s -40s linear infinite;
         will-change: transform;
         
         &:nth-child(2) {
@@ -64,3 +72,31 @@
     }
 }
 
+
+.banner-left {
+    display: flex;
+    width: 100%;
+    white-space: nowrap;
+    span{
+        @include forBanner(#FF9900, $black);
+    }
+}
+
+.banner-right {
+    display: flex;
+    width: 100%;
+    white-space: nowrap;
+    span{
+        @include forBanner(#FF6D3F, $black);
+    }
+}
+
+.tilt-right{
+    margin-top: -75px;
+    transform: rotate(4deg);
+}
+.tilt-left{
+    margin-left: -20px;
+    margin-top: 50px;
+    transform: rotate(-4deg);
+}

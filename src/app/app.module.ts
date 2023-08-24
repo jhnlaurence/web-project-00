@@ -8,6 +8,8 @@ import { FooterComponent } from './core/components/footer/footer.component';
 import { IntroductionSectionComponent } from './core/introduction-section/introduction-section.component';
 import { SectionOneComponent } from './core/home/section-one/section-one.component';
 import { SectionTwoComponent } from './core/home/section-two/section-two.component';
+import { ContactUsComponent } from './core/contact-us/contact-us.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -18,10 +20,12 @@ import { SectionTwoComponent } from './core/home/section-two/section-two.compone
     FooterComponent,
     IntroductionSectionComponent,
     SectionOneComponent,
-    SectionTwoComponent
+    SectionTwoComponent,
+    ContactUsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,19 +7,24 @@ nav {
     width: 100%;
     top: 0;
     background-color: $white;
-    @include padding-top-bottom(10px);
+    @include padding-top-bottom(5px);
     color: $grey;
+
+    .center {
+        margin: auto;
+        width: 70%;
+    }
 
     // Navigation links styles using Grid
     .nav-links {
         display: flex;
-        width: 100%;
+        width: 100%; 
         justify-content: space-evenly;
         align-items: center;
         flex-wrap: wrap;
 
         padding: 10px;
-        font-size: 2em;
+        font-size: 1.5em;
         list-style-type: none;
         font-family: "Montserrat Medium";
         
@@ -27,7 +32,7 @@ nav {
             text-decoration: none;
             color: $grey;
             padding: 0px 10px;
-            position:relative;
+            position:relative; 
             // Hover effect for links
             &:hover {
                 color: $orange;

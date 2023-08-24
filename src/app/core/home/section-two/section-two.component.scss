@@ -1,0 +1,30 @@
+@import "../../../../assets/scss/main.scss";
+
+section {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+h1 {
+    font-family: "Montserrat Regular";
+    font-size: 8vh;
+}
+
+#adj {
+    margin-left: 10vh;
+    color:red;
+}
+#adj:after {
+    content:"";
+    animation: adj 5s linear infinite;
+}
+@keyframes adj {
+    0% {content:"MEMORABLE";}
+    30% { content:"EXCEPTIONAL";}
+    60% { content:"UNIQUE";}
+    100% { content:"ENDEARING";}
+}
