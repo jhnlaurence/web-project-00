@@ -2,15 +2,53 @@
 
 <section>
     <div class="container">
-        <div>
-            Email:
-            Title:
-            Message:
-        </div>
-        <div>
-            Image on the right
-        </div>
-        <p>start here</p>
+        <form [formGroup]="contactUsForm" (ngSubmit)="onSubmit()">
+            <div>
+                <label>Email</label>
+                <input type="email" formControlName="email"
+                class="form-control">
+                <!-- The validation error here -->
+                <span>
+                    <span *ngIf="!contactUsForm.get('email').valid && contactUsForm.get('email').touched"
+                        class="help-block">
+                        Please enter a valid e-mail.
+                    </span>
+                </span>
+            </div> 
+            <!-- nested formGroup -->
+            <div formGroupName="userMessage">
+                <div>
+                    <label>Subject</label>
+                    <input type="text" formControlName="subject" class="form-control">
+                    <span>
+                        <span *ngIf="!contactUsForm.get('userMessage.subject').valid && contactUsForm.get('userMessage.subject').touched"
+                        class="help-block">
+                            Please enter a subject.
+                        </span>
+                    </span>
+                </div>
+                <div>
+                    <label>Message</label>
+                    <input type="text" formControlName="message" class="form-control">
+                    <span> 
+                        <span *ngIf="!contactUsForm.get('userMessage.message').valid && contactUsForm.get('userMessage.message').touched"
+                        class="help-block">
+                            Please enter a message.
+                        </span>
+                    </span>
+                </div>
+            </div>
+            <button class="btn btn-primary" type="submit" [disabled]="!contactUsForm.valid"> Send Message! </button>
+        </form>
+        
+
+        <hr>
+
+        {{ sentMail }}
+        {{ sentSubject}}
+        {{ sentMessage }}
+
+
     </div>
 </section>
 

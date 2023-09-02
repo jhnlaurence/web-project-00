@@ -10,6 +10,9 @@ import { SectionOneComponent } from './core/home/section-one/section-one.compone
 import { SectionTwoComponent } from './core/home/section-two/section-two.component';
 import { ContactUsComponent } from './core/contact-us/contact-us.component';
 import { AppRoutingModule } from './app-routing.module';
+import { PortfolioComponent } from './core/portfolio/portfolio.component';
+import { ProjectsComponent } from './core/portfolio/projects/projects.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,11 +24,14 @@ import { AppRoutingModule } from './app-routing.module';
     IntroductionSectionComponent,
     SectionOneComponent,
     SectionTwoComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    PortfolioComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
